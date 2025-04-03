@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "X to n8n",
+  "version": "0.1.8",
+  "description": "Send X post data to an n8n workflow.",
+  "action": {},
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}

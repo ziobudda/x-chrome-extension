@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>X to n8n Options</title>
+    <style>
+        body { font-family: sans-serif; padding: 10px; min-width: 300px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="url"] { width: 95%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #status { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>X to n8n Options</h1>
+
+    <label for="webhookUrl">n8n Webhook Base URL:</label>
+    <input type="url" id="webhookUrl" placeholder="https://your-n8n-instance/webhook/...">
+
+    <label for="webhookPath">Optional Path:</label>
+    <input type="text" id="webhookPath" placeholder="e.g., my-custom-path">
+    <small>This will be appended to the Base URL (e.g., .../webhook/my-custom-path)</small>
+    <br><br>
+
+    <button id="saveButton">Save</button>
+    <div id="status"></div>
+
+    <script src="scripts/options.js"></script>
+</body>
+</html>
